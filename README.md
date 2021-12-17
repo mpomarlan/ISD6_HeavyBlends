@@ -3,10 +3,14 @@ Contains example OWL files for the "It Is What It Tends To Do" paper submitted t
 
 The example files are in the owl folder, and they are the following:
 
-background_knowledge.owl: this is called the "heavyblend" ontology, and contains the agent's background knowledge.
+background_knowledge.owl: this is called the "heavyblend" ontology, and contains the agent's background knowledge
+
 geeral_heavy.owl: contains a single axiom defining "Heavy" in a situation independent way
+
 X_knowledge.owl: (where X is one of lid, paperweight, hammer, backpack, press) contains some axioms describing situation specific knowledge but NOT a definition for Heavy
+
 X\_heavy.owl: contains one axiom defining a situation-dependent concept Heavy\_X
+
 X\_problem.owl: simply imports all owl files relevant for a particular problem, and is a convenient file to load in Protege.
 
 We are working on an implementation of the blending algorithm at the moment, so the example files are just to provide the context for the axioms mentioned in the paper, and to check that the various situation-dependent definitions of Heavy are actually subsumed by the general one. To check this, load one of the X\_problem.owl files in Protege and run an ALC-capable reasoner.
