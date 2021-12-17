@@ -1,0 +1,66 @@
+Prefix(:=<http://www.semanticweb.org/blandcorporatio/heavyblend_dbg/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/blandcorporatio/heavyblend_dbg>
+Import(<http://www.semanticweb.org/blandcorporatio/heavyblend>)
+Annotation(<http://cair.za.net/consistent> "true"^^xsd:boolean)
+
+Declaration(Class(:DBG))
+Declaration(Class(:DBGF))
+Declaration(Class(:Heavy_Backpack))
+Declaration(Class(:Heavy_Hammer))
+Declaration(Class(:Heavy_Lid))
+Declaration(Class(:Heavy_Paperweight))
+Declaration(Class(:Heavy_Press))
+Declaration(AnnotationProperty(<http://cair.za.net/consistent>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/blandcorporatio/heavyblend/Heavy> (<http://www.semanticweb.org/blandcorporatio/heavyblend/Heavy>)
+
+EquivalentClasses(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) <http://www.semanticweb.org/blandcorporatio/heavyblend/Heavy> ObjectIntersectionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isQualityOf> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/placedAt> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isForcedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/SignificantForce>)))))
+
+# Class: :DBG (:DBG)
+
+EquivalentClasses(:DBG ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/hasMotion> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/impededMovingRelativeTo> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isClassifiedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/Background>))))
+
+# Class: :DBGF (:DBGF)
+
+EquivalentClasses(:DBGF ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isForcedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/SignificantForce>))
+
+# Class: :Heavy_Backpack (:Heavy_Backpack)
+
+EquivalentClasses(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Backpack ObjectIntersectionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isQualityOf> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/placedOn> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/hasMotion> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/impededMovingRelativeTo> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isClassifiedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/Background>)))))))
+SubClassOf(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Backpack <http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality>)
+
+# Class: :Heavy_Hammer (:Heavy_Hammer)
+
+EquivalentClasses(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Hammer ObjectIntersectionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isQualityOf> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/collidesWith> ObjectComplementOf(ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/immersedInAndKeptStillBy> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isClassifiedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/Medium>)))))))
+SubClassOf(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Hammer <http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality>)
+
+# Class: :Heavy_Lid (:Heavy_Lid)
+
+EquivalentClasses(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Lid ObjectIntersectionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isQualityOf> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/placedAt> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/permitsUnimpeded> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/relativeStillnessTo> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isClassifiedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/Container>)))))))
+SubClassOf(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Lid <http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality>)
+
+# Class: :Heavy_Paperweight (:Heavy_Paperweight)
+
+EquivalentClasses(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Paperweight ObjectIntersectionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isQualityOf> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/placedAt> ObjectComplementOf(ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/immersedInAndMovedBy> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isClassifiedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/Medium>)))))))
+SubClassOf(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Paperweight <http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality>)
+
+# Class: :Heavy_Press (:Heavy_Press)
+
+EquivalentClasses(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Press ObjectIntersectionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isQualityOf> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/placedOn> ObjectComplementOf(ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/immersesAndKeepsStill> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isClassifiedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/Substance>)))))))
+SubClassOf(Annotation(<http://www.cair.za.net/rank> "-1"^^xsd:integer) :Heavy_Press <http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality>)
+
+
+)

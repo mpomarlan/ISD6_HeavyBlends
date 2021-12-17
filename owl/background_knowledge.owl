@@ -1,0 +1,214 @@
+Prefix(:=<http://www.semanticweb.org/blandcorporatio/heavyblend/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/blandcorporatio/heavyblend>
+
+Declaration(Class(:Background))
+Declaration(Class(:Container))
+Declaration(Class(:Force))
+Declaration(Class(:Heavy))
+Declaration(Class(:MassQuality))
+Declaration(Class(:Medium))
+Declaration(Class(:Motion))
+Declaration(Class(:Object))
+Declaration(Class(:Quality))
+Declaration(Class(:Region))
+Declaration(Class(:Role))
+Declaration(Class(:SignificantForce))
+Declaration(Class(:SignificantMotion))
+Declaration(Class(:SignificantObject))
+Declaration(Class(:SignificantRegion))
+Declaration(Class(:Substance))
+Declaration(ObjectProperty(:approaching))
+Declaration(ObjectProperty(:classifies))
+Declaration(ObjectProperty(:collidesWith))
+Declaration(ObjectProperty(:exerts))
+Declaration(ObjectProperty(:forces))
+Declaration(ObjectProperty(:hasMotion))
+Declaration(ObjectProperty(:immersedIn))
+Declaration(ObjectProperty(:immersedInAndForcedBy))
+Declaration(ObjectProperty(:immersedInAndKeptStillBy))
+Declaration(ObjectProperty(:immersedInAndMovedBy))
+Declaration(ObjectProperty(:immerses))
+Declaration(ObjectProperty(:immersesAndKeepsStill))
+Declaration(ObjectProperty(:impededMovingRelativeTo))
+Declaration(ObjectProperty(:isClassifiedBy))
+Declaration(ObjectProperty(:isForcedBy))
+Declaration(ObjectProperty(:isQualityOf))
+Declaration(ObjectProperty(:leaving))
+Declaration(ObjectProperty(:permitsUnimpeded))
+Declaration(ObjectProperty(:placedAt))
+Declaration(ObjectProperty(:placedOn))
+Declaration(ObjectProperty(:relativeStillnessTo))
+Declaration(ObjectProperty(:relativeTo))
+Declaration(ObjectProperty(:resists))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :approaching (:approaching)
+
+SubObjectPropertyOf(:approaching :relativeTo)
+
+# Object Property: :classifies (:classifies)
+
+ObjectPropertyDomain(:classifies :Role)
+
+# Object Property: :collidesWith (:collidesWith)
+
+SubObjectPropertyOf(:collidesWith :placedAt)
+
+# Object Property: :exerts (:exerts)
+
+ObjectPropertyRange(:exerts :Force)
+
+# Object Property: :hasMotion (:hasMotion)
+
+ObjectPropertyDomain(:hasMotion :Object)
+ObjectPropertyRange(:hasMotion :Motion)
+
+# Object Property: :immersedIn (:immersedIn)
+
+AnnotationAssertion(rdfs:comment :immersedIn "Asserts that a physical object is surrounded by, or at least has a significant common boundary with, some physical medium.")
+SubObjectPropertyOf(:immersedIn :placedAt)
+
+# Object Property: :immersedInAndForcedBy (:immersedInAndForcedBy)
+
+SubObjectPropertyOf(:immersedInAndForcedBy :immersedIn)
+ObjectPropertyRange(:immersedInAndForcedBy :Object)
+
+# Object Property: :immersedInAndKeptStillBy (:immersedInAndKeptStillBy)
+
+SubObjectPropertyOf(:immersedInAndKeptStillBy :immersedInAndForcedBy)
+ObjectPropertyRange(:immersedInAndKeptStillBy :Object)
+
+# Object Property: :immersedInAndMovedBy (:immersedInAndMovedBy)
+
+AnnotationAssertion(rdfs:comment :immersedInAndMovedBy "Asserts that a physical object is immersed in a medium, and further moves along with the currents/waves inside this medium.")
+SubObjectPropertyOf(:immersedInAndMovedBy :immersedInAndForcedBy)
+ObjectPropertyRange(:immersedInAndMovedBy :Object)
+
+# Object Property: :immerses (:immerses)
+
+ObjectPropertyRange(:immerses :Object)
+
+# Object Property: :immersesAndKeepsStill (:immersesAndKeepsStill)
+
+SubObjectPropertyOf(:immersesAndKeepsStill :immerses)
+
+# Object Property: :impededMovingRelativeTo (:impededMovingRelativeTo)
+
+SubObjectPropertyOf(:impededMovingRelativeTo :relativeTo)
+
+# Object Property: :isClassifiedBy (:isClassifiedBy)
+
+ObjectPropertyRange(:isClassifiedBy :Role)
+
+# Object Property: :isForcedBy (:isForcedBy)
+
+ObjectPropertyRange(:isForcedBy :Force)
+
+# Object Property: :isQualityOf (:isQualityOf)
+
+ObjectPropertyDomain(:isQualityOf :Quality)
+ObjectPropertyRange(:isQualityOf :Object)
+
+# Object Property: :leaving (:leaving)
+
+SubObjectPropertyOf(:leaving :relativeTo)
+
+# Object Property: :permitsUnimpeded (:permitsUnimpeded)
+
+SubObjectPropertyOf(:permitsUnimpeded owl:topObjectProperty)
+ObjectPropertyRange(:permitsUnimpeded :Motion)
+
+# Object Property: :placedAt (:placedAt)
+
+AnnotationAssertion(rdfs:comment :placedAt "A generic way of describing that some object or region is placed somehow relative to another.")
+ObjectPropertyDomain(:placedAt ObjectUnionOf(:Object :Region))
+ObjectPropertyRange(:placedAt ObjectUnionOf(:Object :Region))
+
+# Object Property: :placedOn (:placedOn)
+
+AnnotationAssertion(rdfs:comment :placedOn "Asserts that an object or region is located in contact with another, and typically some kind of support is also provided to the placed object/region.")
+SubObjectPropertyOf(:placedOn :placedAt)
+
+# Object Property: :relativeStillnessTo (:relativeStillnessTo)
+
+SubObjectPropertyOf(:relativeStillnessTo :relativeTo)
+
+# Object Property: :relativeTo (:relativeTo)
+
+ObjectPropertyDomain(:relativeTo :Motion)
+ObjectPropertyRange(:relativeTo :Object)
+
+# Object Property: :resists (:resists)
+
+SubObjectPropertyOf(:resists :forces)
+ObjectPropertyRange(:resists :Motion)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Background (:Background)
+
+SubClassOf(:Background :Role)
+SubClassOf(:Background ObjectUnionOf(:Region ObjectAllValuesFrom(:classifies :Object)))
+
+# Class: :Container (:Container)
+
+SubClassOf(:Container :Role)
+SubClassOf(:Container ObjectAllValuesFrom(:classifies ObjectUnionOf(:Object :Region)))
+
+# Class: :Heavy (:Heavy)
+
+SubClassOf(:Heavy :MassQuality)
+
+# Class: :MassQuality (:MassQuality)
+
+SubClassOf(:MassQuality :Quality)
+
+# Class: :Medium (:Medium)
+
+SubClassOf(:Medium :Role)
+
+# Class: :Object (:Object)
+
+SubClassOf(:Object ObjectSomeValuesFrom(:placedAt ObjectUnionOf(:Object :Region)))
+DisjointClasses(:Object :Region)
+
+# Class: :Quality (:Quality)
+
+SubClassOf(:Quality ObjectSomeValuesFrom(:isQualityOf :Object))
+
+# Class: :SignificantForce (:SignificantForce)
+
+EquivalentClasses(:SignificantForce ObjectIntersectionOf(:Force ObjectSomeValuesFrom(:isClassifiedBy :Role)))
+
+# Class: :SignificantMotion (:SignificantMotion)
+
+EquivalentClasses(:SignificantMotion ObjectIntersectionOf(:Motion ObjectSomeValuesFrom(:isClassifiedBy :Role)))
+
+# Class: :SignificantObject (:SignificantObject)
+
+EquivalentClasses(:SignificantObject ObjectIntersectionOf(:Object ObjectSomeValuesFrom(:isClassifiedBy :Role)))
+
+# Class: :SignificantRegion (:SignificantRegion)
+
+EquivalentClasses(:SignificantRegion ObjectIntersectionOf(:Region ObjectSomeValuesFrom(:isClassifiedBy :Role)))
+
+# Class: :Substance (:Substance)
+
+SubClassOf(:Substance :Role)
+
+SubClassOf(ObjectSomeValuesFrom(:exerts :SignificantForce) ObjectSomeValuesFrom(:isForcedBy :SignificantForce))
+)

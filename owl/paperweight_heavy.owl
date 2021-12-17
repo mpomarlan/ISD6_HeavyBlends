@@ -1,0 +1,16 @@
+Prefix(:=<http://www.semanticweb.org/blandcorporatio/heavyblend/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/blandcorporatio/paperweight_heavy>
+Import(<http://www.semanticweb.org/blandcorporatio/heavyblend>)
+
+# Class: :Heavy_Paperweight (:Heavy_Paperweight)
+
+EquivalentClasses(:Heavy_Paperweight ObjectIntersectionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/MassQuality> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isQualityOf> ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/placedAt> ObjectComplementOf(ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/immersedInAndMovedBy> ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/isClassifiedBy> <http://www.semanticweb.org/blandcorporatio/heavyblend/Medium>)))))))
+
+)

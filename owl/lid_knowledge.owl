@@ -1,0 +1,14 @@
+Prefix(:=<http://www.semanticweb.org/blandcorporatio/heavyblend/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/blandcorporatio/lid_knowledge>
+Import(<http://www.semanticweb.org/blandcorporatio/heavyblend>)
+
+SubClassOf(ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/relativeTo> ObjectUnionOf(<http://www.semanticweb.org/blandcorporatio/heavyblend/SignificantObject> <http://www.semanticweb.org/blandcorporatio/heavyblend/SignificantRegion>)) <http://www.semanticweb.org/blandcorporatio/heavyblend/SignificantMotion>)
+SubClassOf(ObjectAllValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/permitsUnimpeded> <http://www.semanticweb.org/blandcorporatio/heavyblend/SignificantMotion>) ObjectSomeValuesFrom(<http://www.semanticweb.org/blandcorporatio/heavyblend/exerts> <http://www.semanticweb.org/blandcorporatio/heavyblend/SignificantForce>))
+)

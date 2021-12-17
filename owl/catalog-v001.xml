@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/lid_heavy" uri="lid_heavy.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/lid_knowledge" uri="lid_knowledge.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/general_heavy" uri="general_heavy.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/heavyblend" uri="background_knowledge.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/paperweight_heavy" uri="paperweight_heavy.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/paperweight_knowledge" uri="paperweight_knowledge.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/hammer_heavy" uri="hammer_heavy.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/hammer_knowledge" uri="hammer_knowledge.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/backpack_heavy" uri="backpack_heavy.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/backpack_knowledge" uri="backpack_knowledge.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/press_heavy" uri="press_heavy.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/blandcorporatio/press_knowledge" uri="press_knowledge.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+</catalog>
