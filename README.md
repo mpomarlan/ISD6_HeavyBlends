@@ -14,5 +14,7 @@ We are working on an implementation of the blending algorithm at the moment, so 
 The way in which the axioms are split between the owl files is not accidental however, and is meant to show how our approach will work once the algorithm is implemented. So, to combine several situation-dependent definitions (e.g. lid, paperweight, hammer), the algorithm would be called with:
 
 Q = {lid\_heavy.owl, paperweight\_heavy.owl, hammer\_heavy.owl} (Heavy\_Lid, Heavy\_Paperweight, Heavy\_Hammer would all be renamed to Heavy)
+
 Oinit = background_knowledge.owl+{lid\_knowledge.owl, paperweight\_knowledge.owl, hammer\_knowledge.owl}
+
 X = Heavy
